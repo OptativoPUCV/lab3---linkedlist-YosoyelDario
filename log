@@ -14,3 +14,9 @@ Fri 29 Mar 2024 06:15:46 PM UTC:
  tests:  1|5
 total_score: 10/70
 0c1e115
+Fri 29 Mar 2024 06:20:09 PM UTC: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  1|0
+   [ INFO ] llamando a firstList
+cc4b470
