@@ -121,3 +121,15 @@ list.c:66:7: error: expected ‘;’ before ‘current’
 cc1: all warnings being treated as errors
 Compilation failed
 57179eb
+Fri 29 Mar 2024 08:42:07 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:64:14: error: ‘NUll’ undeclared (first use in this function); did you mean ‘NULL’?
+   64 |   if(list == NUll || list -> current == NULL || list -> current -> prev == NULL) return NUll;
+      |              ^~~~
+      |              NULL
+list.c:64:14: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+425e9d4
