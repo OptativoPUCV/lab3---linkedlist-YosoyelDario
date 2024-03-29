@@ -101,3 +101,23 @@ Fri 29 Mar 2024 06:40:26 PM UTC:
  tests:  6|4
 total_score: 25/70
 cef98d5
+Fri 29 Mar 2024 08:41:54 PM UTC: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:64:14: error: ‘NUll’ undeclared (first use in this function); did you mean ‘NULL’?
+   64 |   if(list == NUll || list -> current == NULL || list -> current -> prev == NULL) return NUll;
+      |              ^~~~
+      |              NULL
+list.c:64:14: note: each undeclared identifier is reported only once for each function it appears in
+list.c:66:3: error: statement with no effect [-Werror=unused-value]
+   66 |   list current = list -> current -> prev;
+      |   ^~~~
+list.c:66:7: error: expected ‘;’ before ‘current’
+   66 |   list current = list -> current -> prev;
+      |       ^~~~~~~~
+      |       ;
+cc1: all warnings being treated as errors
+Compilation failed
+57179eb
