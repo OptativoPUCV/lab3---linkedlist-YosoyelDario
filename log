@@ -192,3 +192,9 @@ Fri 29 Mar 2024 08:59:50 PM UTC:
  tests:  9|0
    [ INFO ] Insertando 4 a la lista (pushfront)
 ee313e8
+Fri 29 Mar 2024 09:01:52 PM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+ tests:  10|2
+total_score: 45/70
+258893e
