@@ -32,8 +32,9 @@ List * createList() {
   List * list = (List *)malloc(sizeof(List));
   if(list == NULL) exit(EXIT_FAILURE);
 
-  
-  return NULL;
+  list -> head = NULL;
+  list -> tail = NULL;
+  return list;
 }
 
 void * firstList(List * list) {
