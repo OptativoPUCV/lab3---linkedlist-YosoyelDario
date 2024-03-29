@@ -139,3 +139,17 @@ Fri 29 Mar 2024 08:42:24 PM UTC:
  tests:  9|3
 total_score: 35/70
 851951d
+Fri 29 Mar 2024 08:58:11 PM UTC: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:72:35: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   72 |   if(list -> head == NULL) return NULL;
+      |                                   ^~~~
+list.c:70:6: note: declared here
+   70 | void pushFront(List * list, void * data){
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+879a549
