@@ -280,3 +280,30 @@ Fri 29 Mar 2024 10:11:52 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9fba63e
+Fri 29 Mar 2024 10:13:14 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:129:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+  129 |     Nodo* aux = list -> current;
+      |     ^~~~
+      |     Node
+list.c:129:17: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+  129 |     Nodo* aux = list -> current;
+      |                 ^~~~
+list.c:130:9: error: request for member ‘prev’ in something not a structure or union
+  130 |     aux -> prev -> next = aux-> next;
+      |         ^~
+list.c:130:30: error: request for member ‘next’ in something not a structure or union
+  130 |     aux -> prev -> next = aux-> next;
+      |                              ^~
+list.c:131:8: error: request for member ‘next’ in something not a structure or union
+  131 |     aux-> next -> prev = aux -> prev;
+      |        ^~
+list.c:131:30: error: request for member ‘prev’ in something not a structure or union
+  131 |     aux-> next -> prev = aux -> prev;
+      |                              ^~
+cc1: all warnings being treated as errors
+Compilation failed
+b4d56c6
