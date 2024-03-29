@@ -307,3 +307,8 @@ list.c:131:30: error: request for member ‘prev’ in something not a structure
 cc1: all warnings being treated as errors
 Compilation failed
 b4d56c6
+Fri 29 Mar 2024 10:13:26 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+8ac209a
