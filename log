@@ -198,3 +198,39 @@ Fri 29 Mar 2024 09:01:52 PM UTC:
  tests:  10|2
 total_score: 45/70
 258893e
+Fri 29 Mar 2024 10:05:47 PM UTC: 
+ list.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:89:3: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   89 |   Nodo* newNodo = createNode(data);
+      |   ^~~~
+      |   Node
+list.c:89:19: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   89 |   Nodo* newNodo = createNode(data);
+      |                   ^~~~~~~~~~
+list.c:90:54: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   90 |   if(list == NULL || list -> current == NULL) return 0;
+      |                                                      ^
+list.c:88:6: note: declared here
+   88 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+list.c:92:11: error: request for member ‘next’ in something not a structure or union
+   92 |   newNodo -> next = list -> current -> next;
+      |           ^~
+list.c:93:11: error: request for member ‘prev’ in something not a structure or union
+   93 |   newNodo -> prev = list -> current;
+      |           ^~
+list.c:97:18: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   97 |     list -> tail = newNodo;
+      |                  ^
+list.c:101:37: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+  101 |     list -> current -> next -> prev = newNodo;
+      |                                     ^
+list.c:103:27: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+  103 |   list -> current -> next = newNodo;
+      |                           ^
+cc1: all warnings being treated as errors
+Compilation failed
+6b83d01
