@@ -140,7 +140,7 @@ void * popCurrent(List * list){
   }
 
   list -> current = aux -> next;
-  free(aux)
+  free(aux);
   
   return dato;
 }
