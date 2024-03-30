@@ -355,3 +355,35 @@ Sat 30 Mar 2024 04:47:33 AM UTC:
  tests:  12|0
 total_score: 70/70
 69b4e5f
+Sat 30 Mar 2024 10:44:06 PM UTC: 
+ list.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:136:21: error: statement with no effect [-Werror=unused-value]
+  136 |   else(list -> tail == aux)
+      |       ~~~~~~~~~~~~~~^~~~~~~
+list.c:136:28: error: expected ‘;’ before ‘{’ token
+  136 |   else(list -> tail == aux)
+      |                            ^
+      |                            ;
+  137 |   {
+      |   ~                         
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+test.c:469: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:147:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  147 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2df4440
