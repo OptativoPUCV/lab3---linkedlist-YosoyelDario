@@ -328,3 +328,24 @@ list.c:133:8: error: ‘aux’ undeclared (first use in this function)
 list.c:133:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d91f67e
+Sat 30 Mar 2024 04:47:21 AM UTC: 
+ list.c | 27 ++++++++++++++++++---------
+ 1 file changed, 18 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:143:12: error: expected ‘;’ before ‘return’
+  143 |   free(aux)
+      |            ^
+      |            ;
+  144 | 
+  145 |   return dato;
+      |   ~~~~~~    
+list.c:123:10: error: unused variable ‘dato’ [-Werror=unused-variable]
+  123 |   void * dato = aux -> data;
+      |          ^~~~
+list.c:146:1: error: control reaches end of non-void function [-Werror=return-type]
+  146 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+30fa56d
